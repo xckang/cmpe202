@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Inspector here.
  * 
@@ -8,12 +8,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Inspector extends Alien
 {
-    /**
-     * Act - do whatever the Inspector wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    private ArrayList<Picker> pickers = new ArrayList<Picker>();
+    
+    public void addPicker(Picker obj) 
     {
-        // Add your action code here.
-    }    
+        pickers.add(obj);
+    }
+    
+    public void removePicker(Picker obj) 
+    {
+        pickers.remove(obj);
+    }
+    
+    public void inspect(Coin coin)
+    {
+        int pickerID = Greenfoot.getRandomNumber(pickers.size());
+        Picker picker = pickers.get(pickerID);
+        if (coin.getClass() == Quarter.class) {
+            picker.pick();
+        } else {
+            GumballWorld world = (GumballWorld)getWorld();
+            world.getMachine().setMessage("wrong coin");
+        }
+        
+    }
+    
 }

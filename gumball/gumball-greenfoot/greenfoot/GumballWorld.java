@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GumballWorld extends World
 {
+    private GumballMachine gumballmachine = null;
+    private Inspector inspector = null;
 
     /**
      * Constructor for objects of class GumballWorld.
@@ -26,13 +28,13 @@ public class GumballWorld extends World
      */
     private void prepare()
     {
-        GumballMachine gumballmachine = new GumballMachine();
+        gumballmachine = new GumballMachine();
         addObject(gumballmachine, 367, 237);
         addObject( new Penny(), 57, 71 ) ;
         addObject( new Quarter(), 68, 156 ) ;
         addObject( new FakeQuarter(), 66, 248 ) ;
 
-        Inspector inspector = new Inspector();
+        inspector = new Inspector();
         addObject(inspector, 533, 291);
         RandomPicker randompicker = new RandomPicker();
         addObject(randompicker, 643, 104);
@@ -40,5 +42,17 @@ public class GumballWorld extends World
         GreenPicker greenpicker = new GreenPicker();
         addObject(greenpicker, 686, 454);
         greenpicker.setLocation(669, 456);
+        inspector.addPicker(greenpicker);
+        inspector.addPicker(randompicker);
+    }
+    
+    public GumballMachine getMachine()
+    {
+        return gumballmachine;
+    }
+    
+    public Inspector getInspector()
+    {
+        return inspector;
     }
 }

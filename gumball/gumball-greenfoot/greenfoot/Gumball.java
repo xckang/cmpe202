@@ -15,8 +15,4 @@ public class Gumball extends Actor
         image.scale( 50, 50 ) ; 
     }
 
-    public void act() 
-    {
-        // Add your action code here.
-    }    
 }

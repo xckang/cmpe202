@@ -8,12 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Picker extends Alien
 {
-    /**
-     * Act - do whatever the Picker wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    public void pick(){};
+    
+    public void popGumball(Gumball gb)
     {
-        // Add your action code here.
-    }    
+        GumballWorld world = (GumballWorld)getWorld();
+        world.addObject(gb, 500, 500);
+        world.getMachine().setMessage(gb.getClass().getName());
+    }
 }
