@@ -1,0 +1,3 @@
+To simplify the question, acceptable coins are restrained to be nikles, dimes or quarters. A gumball machine can be set to accept only quarters or all those three kinds of coins. Other constraints can be implement in a similar way.
+
+In part 2 of the lab, HasQuarterState and NoQuarterState are replaced by NoCoinState, NotEnoughCoinState and EnoughCoinState to express more state to support all three kinds of gumball machines.
