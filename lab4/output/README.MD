@@ -42,4 +42,4 @@ New available table is the <b>Client</b>
 
  ## Collaboration Diagram
 
- ![Collaboration Diagram](https://github.com/xckang/cmpe202/tree/master/lab4/output/CollaborationDiagram.png)
+ ![Collaboration Diagram](https://github.com/xckang/cmpe202/blob/master/lab4/output/Collaboration%20Diagram.png)
