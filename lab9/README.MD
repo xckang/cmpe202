@@ -1,0 +1,3 @@
+- Summary
+  - Java Lambda Functional Style is straightforward, easier to implement, yet not suitable for reuse and expandable. Iterator is coupled with data.
+  - Design Pattern Style is more complex, eaiser for reuse. The iterator is seperated from the data itself.
