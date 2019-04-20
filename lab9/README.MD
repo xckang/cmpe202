@@ -1,3 +1,15 @@
+- I chose Iterator before professor said not to. So there are two parterns here.
+  - Iterator
+    - QueryResults
+    - QueryResultsIterator
+    - QueryResultsInteratorImpl
+    - Main.main1
+  - Strategy
+    - DataSet
+    - BubbleSort
+    - QuickSort
+    - SortingSrategy
+    - Main.main
 - Summary
-  - Java Lambda Functional Style is straightforward, easier to implement, yet not suitable for reuse and expandable. Iterator is coupled with data.
-  - Design Pattern Style is more complex, eaiser for reuse. The iterator is seperated from the data itself.
+  - Using Design Pattern Style, ```Strategy``` is coupled with data class. It's more useful for complicate jobs.
+  - Java Lambda Functional Style is more straightforward, ```Strategy``` is seperated from the data itself.
